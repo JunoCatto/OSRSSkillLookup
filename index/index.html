@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5"/>
+<line x1="13" x2="19" y1="19" y2="13"/>
+<line x1="16" x2="20" y1="16" y2="20"/>
+<line x1="19" x2="21" y1="21" y2="19"/>
+<polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5"/>
+<line x1="5" x2="9" y1="14" y2="18"/>
+<line x1="7" x2="4" y1="17" y2="20"/>
+<line x1="3" x2="5" y1="19" y2="21"/>
+</svg>'>
+    <link rel="stylesheet" href="styles.css">
+    <!-- API -->
+    <script type="module" src="./runescapeWikiAPI.js" defer></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Runescape Skills</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Override style sheet -->
+    <style>
+        body {
+            background-color: #1e1e2e;
+            color: #cdd6f4
+        }
+    </style>
+</head>
+
+<!-- Main body-->
+
+<body>
+    <div class="text-center my-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-swords-icon lucide-swords">
+            <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
+            <line x1="13" x2="19" y1="19" y2="13" />
+            <line x1="16" x2="20" y1="16" y2="20" />
+            <line x1="19" x2="21" y1="21" y2="19" />
+            <polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5" />
+            <line x1="5" x2="9" y1="14" y2="18" />
+            <line x1="7" x2="4" y1="17" y2="20" />
+            <line x1="3" x2="5" y1="19" y2="21" />
+        </svg>
+        <h1>OSRS Skill Lookup</h1>
+        <p>Enter your OSRS username to see your skills!</p>
+    </div>
+    <div id="formcontainer">
+        <form id="userInput" class="d-flex" method="POST" onsubmit="return false;">
+            <input class="form-control" type="text" id="userName" name="userName" placeholder="Enter player name...">
+            <button id="searchButton" class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+    </div>
+    <div class="container" id="mainContainer">
+    </div>
+
+    <div id="playerContainer">
+        <div id="playerInfo" class="d-flex justify-content-around">
+            <div id="playerLevel">
+                <p>Overall Level</p>
+            </div>
+            <div id="playerExp">
+                <p>Total Experience</p>
+            </div>
+            <div id="playerRank">
+                <p>Rank</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="tabContainer">
+        <nav id="tabSelector" class="nav nav-pills flex-column flex-sm-row" style="padding:5px;">
+            <a id="Skills" class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Skills</a>
+            <a id="Minigames" class="flex-sm-fill text-sm-center nav-link" href="#">Activities</a>
+            <a id="Statistics" class="flex-sm-fill text-sm-center nav-link" href="#">Statistics</a>
+        </nav>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+
+<!-- Skill Divs -->
+<div id="skillContainer" class="tabContainer">
+    <div class="d-flex justify-content-center" id="spinner" style="margin-top: 10px;">
+        <div class="spinner-border" style="width: 5rem; height: 5rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+<div id="minigameContainer" class="tabContainer"></div>
+</body>
+
+
+</html>

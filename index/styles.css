@@ -1,0 +1,132 @@
+body {
+    background-color: #1e1e2e
+}
+text {
+    color: #cdd6f4
+}
+
+html {
+  scrollbar-gutter: stable; /* reserves space for scrollbar */
+}
+
+.container {
+    display:flex;
+    flex-direction:column;
+}
+#formcontainer {
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    display:flex;
+    flex-direction:column;
+    justify-content: stretch;
+}
+#userInput {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+}
+#userInput button {
+    margin-left: 5px;
+}
+
+#playerContainer {
+    display: none;
+}
+#playerInfo { 
+    background-color:#181825 ;
+    padding:10px;
+    margin-top: 20px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    border-radius:10px;
+}
+#playerInfo > div {
+    background-color: #11111b;
+    flex-grow: 1;
+    padding: inherit;
+    margin: 5px;
+    border-radius: inherit;
+}
+
+#tabContainer {
+    display: none;
+    flex-direction:column;
+    justify-content: stretch;
+    margin-top: 20px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    border-radius: 10px;
+    background-color: #181825;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    padding: 10px;
+}
+
+#tabSelector {
+    display: flex;
+    justify-content: center;
+}
+
+.tabContainer {
+   /* automatically grows to fit the div */
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    border-radius: 10px;
+    background-color: #181825;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-bottom: 2.5vh;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.skillsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width:200px;
+    background-color: #11111b;
+    padding: inherit;
+    margin: 5px;
+    border-radius: inherit;
+}
+.skillTop {
+    display: flex;
+    align-items: center;
+    gap: 8px;  /* spacing between icon and text */
+}
+
+/* .skillName {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+} */
+.skillIcon {
+    display: inline-flex;           
+    align-items: center;
+    justify-content: center;
+    width: 40px;                   
+    height: 40px;                   
+    border: 2px solid #333;         
+    border-radius: 6px;             
+    margin-right: 8px;              
+    box-sizing: border-box;
+}
+.skillIcon i {
+    width: 24px;                    /* Icon size */
+    height: 24px;
+}
+
+#spinner {
+    display: none;
+}
+
+.rank {
+   color: #a6adc8;
+   font-size: 14px;
+}
