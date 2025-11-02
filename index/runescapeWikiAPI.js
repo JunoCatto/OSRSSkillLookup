@@ -38,7 +38,7 @@ async function fetchData(user) {
   skillContainer.style.display = "grid";
   spinner.style.display = "flex";
   // API call
-  const response = await fetch(`/api/player?${user}`);
+  const response = await fetch(`/.netlify/functions/player?user=${user}`);
   const result = await response.json();
 
   // Error checking for player not found
