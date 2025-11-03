@@ -1,0 +1,5 @@
+Additional Features:
+
+1. mobile friendly (shift the search bar/submit button)
+2. filling out search bar with user name
+3. stats page

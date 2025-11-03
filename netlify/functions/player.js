@@ -1,4 +1,4 @@
-export async function handler(event, context) {
+export async function handler(event) {
   const user = event.queryStringParameters.user;
   if (!user) {
     return {

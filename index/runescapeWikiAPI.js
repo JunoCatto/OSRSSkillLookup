@@ -4,6 +4,7 @@ import {
   icons,
 } from "https://cdn.jsdelivr.net/npm/lucide@latest/+esm";
 import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js";
+import chartJs from "https://cdn.jsdelivr.net/npm/chart.js@4.5.1/+esm";
 
 // Global variables
 let currentUser = "";
@@ -137,6 +138,11 @@ function renderMinigames() {
   });
   createIcons({ icons });
 }
+// Renders the statistics tab
+function renderStatistics() {
+  statisticsContainer.innerHTML = "";
+}
+
 // Swaps tabs
 function swapTab(tabName) {
   document
@@ -150,6 +156,10 @@ function swapTab(tabName) {
 
     case "Activities":
       minigameContainer.style.display = "grid";
+      break;
+
+    case "Statistics":
+      statisticsContainer.style.display = "grid";
       break;
   }
 }
