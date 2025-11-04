@@ -111,7 +111,7 @@ export function minigameChartData() {
   const canvas = document.getElementById("minigameChart");
   if (!canvas) return;
 
-  // Colours
+  // Colours (had to look up for syntax)
   const backgroundColours = minigameData.map((_, i) => {
     return catppuccinColors[i % catppuccinColors.length];
   });

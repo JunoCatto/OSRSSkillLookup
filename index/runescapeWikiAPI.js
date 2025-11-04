@@ -89,6 +89,7 @@ function renderSkills() {
     const progress = (skill.level / maxLevel) * 100;
 
     const iconName = iconMap[skill.name];
+
     skillDiv.innerHTML = `<div class="skillTop">
             <span class="skillIcon"><i data-lucide=${iconName}></i></span>
             <span class="fw-semibold skillName">${skill.name}</span>
