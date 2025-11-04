@@ -4,7 +4,7 @@ import {
   icons,
 } from "https://cdn.jsdelivr.net/npm/lucide@latest/+esm";
 import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js";
-import { chartData } from "./charts.js";
+import { combatChartData, minigameChartData } from "./charts.js";
 
 // Global variables
 let currentUser = "";
@@ -145,7 +145,8 @@ function renderMinigames() {
 }
 // Renders the statistics tab
 function renderStatistics() {
-  chartData();
+  combatChartData();
+  minigameChartData();
 }
 
 // Swaps tabs
