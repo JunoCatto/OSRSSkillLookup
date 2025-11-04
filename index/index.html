@@ -58,7 +58,8 @@
     <div id="formcontainer">
         <form id="userInput" class="d-flex" method="POST" onsubmit="return false;">
             <input class="form-control" type="text" id="userName" name="userName" placeholder="Enter player name...">
-            <button id="searchButton" class="btn btn-outline-primary" type="submit">Search</button>
+            <button style="display:none;" id="searchButton" class="btn btn-outline-primary"
+                type="submit">Search</button>
         </form>
     </div>
     <div class="container" id="mainContainer">
@@ -100,8 +101,12 @@
     </div>
 </div>
 <div id="minigameContainer" class="tabContainer"></div>
-<div id="statisticsContainer" class="tabContainer"></div>
-</body>
+<div id="statisticsContainer" class="tabContainer">
+    <div>
+        <canvas id="combatLevel"></canvas>
+    </div>
+    <div></div>
+    </body>
 
 
 </html>

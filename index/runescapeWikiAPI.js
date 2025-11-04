@@ -4,11 +4,13 @@ import {
   icons,
 } from "https://cdn.jsdelivr.net/npm/lucide@latest/+esm";
 import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js";
-import chartJs from "https://cdn.jsdelivr.net/npm/chart.js@4.5.1/+esm";
+import { chartData } from "./charts.js";
 
 // Global variables
 let currentUser = "";
 let userData = null;
+export let minigameData = null;
+export let skillData = null;
 const skillContainer = document.getElementById("skillContainer");
 const tabContainer = document.getElementById("tabContainer");
 const playerContainer = document.getElementById("playerContainer");
@@ -53,6 +55,7 @@ async function fetchData(user) {
   userData = result;
   renderSkills();
   renderMinigames();
+  renderStatistics();
   swapTab("Skills");
   document.querySelectorAll("#tabSelector .nav-link").forEach((tab) => {
     tab.classList.remove("active");
@@ -103,6 +106,7 @@ function renderSkills() {
           `;
     skillContainer.appendChild(skillDiv);
   });
+  skillData = cleanedData;
   createIcons({ icons });
   // Hide spinner after data is fetched
   spinner.style.display = "none";
@@ -136,11 +140,12 @@ function renderMinigames() {
     </div>`;
     minigameContainer.appendChild(minigameDiv);
   });
+  minigameData = cleanedData;
   createIcons({ icons });
 }
 // Renders the statistics tab
 function renderStatistics() {
-  statisticsContainer.innerHTML = "";
+  chartData();
 }
 
 // Swaps tabs
