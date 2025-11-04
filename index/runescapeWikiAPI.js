@@ -28,7 +28,6 @@ async function fetchData(user) {
   document
     .querySelectorAll(".tabContainer")
     .forEach((container) => (container.style.display = "none"));
-
   // Show spinner and container
   skillContainer.innerHTML = `
         <div class="d-flex justify-content-center" id="spinner" style="margin-top: 10px;">
@@ -37,9 +36,9 @@ async function fetchData(user) {
           </div>
         </div>
       `;
-
   skillContainer.style.display = "grid";
   spinner.style.display = "flex";
+
   // API call
   const response = await fetch(`/.netlify/functions/player?user=${user}`);
   const result = await response.json();
