@@ -66,7 +66,11 @@ export function combatChartData() {
             color: "#cdd6f4",
           },
           pointLabels: {
-            display: false,
+            display: true,
+            font: {
+              size: 14,
+              color: "#cdd6f4",
+            },
           },
           grid: {
             color: "#6c7086",
