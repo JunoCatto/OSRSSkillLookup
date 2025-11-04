@@ -61,7 +61,7 @@ export function combatChartData() {
           min: 0,
           max: 99,
           ticks: {
-            stepSize: 10,
+            stepSize: 25,
             backdropColor: "transparent",
             color: "#cdd6f4",
           },
