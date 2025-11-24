@@ -22,4 +22,5 @@ export const iconMap = {
   Runecraft: "circle-slash-2",
   Hunter: "footprints",
   Construction: "home",
+  Sailing: "anchor",
 };
