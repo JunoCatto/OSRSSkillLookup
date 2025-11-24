@@ -116,7 +116,7 @@ function renderMinigames() {
   minigameContainer.innerHTML = "";
   // Filter out minigames with score -1, and sorts by score.
   const cleanedData = userData.activities
-    .filter((data) => data.score !== -1)
+    .filter((data) => data.score > 0)
     .map((data) => ({
       name: data.name,
       score: data.score,
